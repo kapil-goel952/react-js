@@ -1,12 +1,25 @@
+
+import Card from './comonents/card'
 import React from 'react'
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <h2>hello baccho</h2>
+   <div className="parent">
+      
+     <Card/>
+     <Card/>
+     <Card/>
+     <Card/>
     </div>
   )
 }
 export default App
 
- 
+
+
+
+
+
+
+
+
