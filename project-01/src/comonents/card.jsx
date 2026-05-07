@@ -10,7 +10,7 @@ function Card(props) {
                 <div class="top"></div>
 
                 <div class="profile">
-                    <img src={props.profilePic} alt="profile"/>
+                    <img src={props.pcdrofilePic} alt="profile"/>
                 </div>
 
                 <h2>{props.name}</h2>

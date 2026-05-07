@@ -86,15 +86,14 @@ function App() {
     following: 390
   }
 ];
-   people.map(function(elem) {
-      
-   })
+   
 
    return (
       <div className="parent">
          {people.map(function(elem){
             return(
                Card(elem)
+               
             )
          })}
       </div>
