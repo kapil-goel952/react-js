@@ -1,15 +1,38 @@
-
-
-
 import React from 'react'
+function Card(props) {
 
-const Card = () => {
+
     return (
-        <div className="card">
-            <img src="https://plus.unsplash.com/premium_photo-1673697239981-389164b7b87f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fHww" alt="nature scene" />
-            <h1>kapil</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, officia.</p>
-            <button>More detals</button>
+        <div class="card-container">
+
+            
+            <div class="card blue">
+                <div class="top"></div>
+
+                <div class="profile">
+                    <img src={props.profilePic} alt="profile"/>
+                </div>
+
+                <h2>{props.name}</h2>
+                <p>{props.rank}</p>
+
+                <div class="stats">
+                    <div>
+                        <h3>{props.followers}</h3>
+                        <span>Followers</span>
+                    </div>
+                    <div>
+                        <h3>{props.following}</h3>
+                        <span>Following</span>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="follow">Follow</button>
+                    <button class="message">Message</button>
+                </div>
+            </div>
+
         </div>
     )
 }

@@ -1,48 +1,116 @@
-*{
-    color:aliceblue;
-    background-color: black;
-    margin :20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.card{
-    background-color: rgb(106, 106, 106);
-    border: 2px dolid ;
-    border-radius: 5px;
-    border:1px solid white;
-    color :black;
-    width: 300px;
-    text-align: center;
-    padding: 2px 8px;
+
+body {
+  background: #e5e5e5;
+  display: flex;
+  padding: 15px;
+  height: 100vh;
 }
 .parent{
-    display: flex;
-    gap:15px;
-}
-.card h1{
-     background-color: rgb(106, 106, 106);
-    color: rgb(0, 0, 0);
-    font-weight: 800;
-    font-size: 35px;
+  gap:15px;
+  padding: 15px;
+  margin: 15px;
+  display: flex;
 
 }
-.card button{
-    background-color: white;
-    color:black;
-    width: 140px;
-    height: 40px;
-    border-radius: 4px;
-}
-.card p{
-     background-color: rgb(106, 106, 106);
-     color:black;
-}
-.card img{
-    
-    object-fit: cover;
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
+
+/* Card */
+.card {
+  width: 260px;
+  margin: 15px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  position: relative;
 }
 
-#test{
-    color:white;
+/* Top color bar */
+.card .top {
+  height: 90px;
+  border-radius: 12px 12px 0 0;
 }
+
+/* Profile image */
+.profile {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+/* Text */
+.card h2 {
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.stats h3 {
+  font-size: 16px;
+}
+
+.stats span {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Default blue theme */
+.blue .top { background: #3498db; }
+.blue h2, .blue .stats span { color: #3498db; }
+
+.blue .follow {
+  background: #3498db;
+  color: white;
+}
+
+.blue .message {
+  border: 2px solid #3498db;
+  background: transparent;
+  color: #3498db;
+}
+
+/* Other themes */
+.red .top { background: #e74c3c; }
+.green .top { background: #27ae60; }
+.purple .top { background: #8e44ad; }
+.orange .top { background: #f39c12; }
