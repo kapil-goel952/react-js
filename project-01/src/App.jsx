@@ -7,7 +7,7 @@ function App() {
    const people = [
   {
     id: 1,
-    profilePic: "https://randomuser.me/api/portraits/men/11.jpg",
+    profilePic: "https://plus.unsplash.com/premium_photo-1677993186547-86e4c4292c3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9yc2hlfGVufDB8fDB8fHww",
     name: "Rahul Sharma",
     rank: "Junior Frontend Developer",
     followers: "12.5K",
@@ -71,7 +71,7 @@ function App() {
   },
   {
     id: 9,
-    profilePic: "https://randomuser.me/api/portraits/men/91.jpg",
+    profilePic: "https://randomuser.me/api/portraits/women/95.jpg",
     name: "Vikas Yadav",
     rank: "MERN Stack Developer",
     followers: "35K",
@@ -92,8 +92,9 @@ function App() {
       <div className="parent">
          {people.map(function(elem){
             return(
-               Card(elem)
-               
+              <div  id sf>
+                <Card profilePic={elem.profilePic}    followers={elem.followers} rank={elem.rank} name={elem.name} following={elem.following}  />
+               </div>
             )
          })}
       </div>
