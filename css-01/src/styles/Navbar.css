@@ -1,0 +1,54 @@
+:root {
+  --main-bg-color: rgb(53, 53, 53);
+}
+
+.navbar {
+    background-color:var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar img {
+    border-radius: 50%;
+    align-items: left;
+    height: 60px;
+    width: 60px;
+    padding: 8px;
+    margin: 8px;
+}
+
+#red {
+    color: red;
+    font-size: 50px;
+    background-color:var(--main-bg-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#bull {
+    color: yellow;
+    font-size: 35px;
+    background-color:var(--main-bg-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.head {
+    display: flex;
+}
+
+.navbar button {
+    background-color:rgb(141, 73, 64);
+    margin: 20px;
+    border-radius: 6px;
+    height: 25px;
+    width: 60px;
+
+}
+
+.button {
+    width: 380px;
+    background-color:var(--main-bg-color);
+    align-items: center;
+    justify-content: space-between;
+
+}
