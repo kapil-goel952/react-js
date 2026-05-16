@@ -5,12 +5,13 @@ function Card(props) {
     return (
         <div class="card-container">
 
-            
+
             <div class="card blue">
                 <div class="top"></div>
 
                 <div class="profile">
-                    <img src={props.pcrofilePic} alt="ile"/>
+                    <img src={props.profilePic} alt="profile" />
+
                 </div>
 
                 <h2>{props.name}</h2>
