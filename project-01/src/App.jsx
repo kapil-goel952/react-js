@@ -89,7 +89,7 @@ function App() {
    
 
    return (
-      <div className="parent">
+      <div className='bg-blue-100'>
          {people.map(function(elem){
             return(
               <div  id sf>
