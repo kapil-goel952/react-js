@@ -3,41 +3,33 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 const MapComponent = () => {
   return (
-    <div className='h-screen w-full bg-black p-4'>
+    <div style={{ height: '100vh', width: '100%' }}>
 
-      <div className='h-full w-full overflow-hidden rounded-4xl shadow-2xl border border-gray-800'>
+      <MapContainer
+        center={[30.7333, 76.7794]}
+        zoom={13}
+        scrollWheelZoom={true}
+        style={{
+          height: '100%',
+          width: '100%',
+          borderRadius: '20px',
+        }}
+      >
 
-        <MapContainer
-          center={[30.7333, 76.7794]}
-          zoom={13}
-          scrollWheelZoom={true}
-          className='h-full w-full z-0'
-        >
+        <TileLayer
+          attribution='Tiles &copy; Esri'
+          url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+        />
 
-          {/* Satellite / Aerial View */}
-          <TileLayer
-            attribution='Tiles &copy; Esri'
-            url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-          />
+        <Marker position={[30.7333, 76.7794]}>
 
-          {/* Marker */}
-          <Marker position={[30.7333, 76.7794]}>
+          <Popup>
+            Chandigarh 🚀
+          </Popup>
 
-            <Popup>
-              <div className='font-semibold text-lg'>
-                Chandigarh 🚀
-              </div>
+        </Marker>
 
-              <p className='text-sm'>
-                Satellite view using Leaflet
-              </p>
-            </Popup>
-
-          </Marker>
-
-        </MapContainer>
-
-      </div>
+      </MapContainer>
 
     </div>
   )
