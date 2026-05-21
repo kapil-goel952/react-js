@@ -1,15 +1,13 @@
 import './index.css'
 
-
+import MapComponent from './Components/mapComponent'
 
 
 function App() {
  
   return (
     <div >
-     <p>hellooooooooooo broskies
-        
-     </p>
+     <MapComponent />    
     </div >
   )
 }
