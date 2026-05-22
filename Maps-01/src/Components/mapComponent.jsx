@@ -1,6 +1,7 @@
 import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
+
 const MapComponent = () => {
   return (
     <div  style={{
@@ -25,13 +26,7 @@ const MapComponent = () => {
           url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
         />
 
-        <Marker position={[30.7333, 76.7794]}>
-
-          <Popup>
-            Chandigarh 🚀
-          </Popup>
-
-        </Marker>
+      
 
       </MapContainer>
 
