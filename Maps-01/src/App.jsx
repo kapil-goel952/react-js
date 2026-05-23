@@ -1,5 +1,6 @@
 import './index.css'
 import MapComponent from './Components/mapComponent'
+import Navbar from './Components/mapComponent'
 
 function App() {
 
@@ -8,11 +9,19 @@ function App() {
       display: "flex",
       height: "100%",
       width: "100%",
-      alignItems: "center",
-      justifyContent: "center"
-    }}>
+      margin:"50px",
+      
 
-      <MapComponent />
+    }}>
+      {/* <div>
+        <Navbar/>
+      </div> */}
+      <div style={{
+        alignItems: "center",
+        justifyContent: "center"
+      }}>
+        <MapComponent />
+      </div>
 
     </div>
   )

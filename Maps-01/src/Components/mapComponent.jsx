@@ -1,28 +1,44 @@
 import React from 'react'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-
+import { MapContainer, TileLayer } from 'react-leaflet'
 
 const MapComponent = () => {
   return (
-    <div>
+
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+       
+      }}
+    >
 
       <MapContainer
         center={[30.7333, 76.7794]}
-        zoom={13}
+        zoom={17}
+        maxZoom={19}
         scrollWheelZoom={true}
+
         style={{
           height: '80vh',
           width: '80vw',
-          borderRadius: '8',
+          borderRadius: '20px',
+          overflow: 'hidden'
         }}
       >
 
+        {/* Satellite Imagery */}
         <TileLayer
-          attribution='Tiles &copy; Esri'
           url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+          attribution='Tiles © Esri'
         />
 
-      
+        {/* Labels / Names Layer */}
+        <TileLayer
+          url='https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}'
+          attribution='Labels © Esri'
+        />
 
       </MapContainer>
 
