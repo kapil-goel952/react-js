@@ -20,12 +20,7 @@ const MapComponent = () => {
         maxZoom={19}
         scrollWheelZoom={true}
 
-        style={{
-          height: '80vh',
-          width: '80vw',
-          borderRadius: '20px',
-          overflow: 'hidden'
-        }}
+      
       >
 
         {/* Satellite Imagery */}
