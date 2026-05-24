@@ -29,7 +29,7 @@ const MapComponent = () => {
           attribution='Tiles © Esri'
         />
 https://revenueharyana.gov.in/
-       
+       https://revenueharyana.gov.in/https://revenueharyana.gov.in/https://revenueharyana.gov.in/
 
       </MapContainer>
 
