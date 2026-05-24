@@ -10,7 +10,6 @@ const MapComponent = () => {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-       
       }}
     >
 
@@ -20,7 +19,10 @@ const MapComponent = () => {
         maxZoom={19}
         scrollWheelZoom={true}
 
-      
+        style={{
+          height: "80vh",
+          width: "80vw",
+        }}
       >
 
         {/* Satellite Imagery */}
