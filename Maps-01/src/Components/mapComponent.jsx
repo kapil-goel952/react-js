@@ -28,8 +28,12 @@ const MapComponent = () => {
           url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
           attribution='Tiles © Esri'
         />
-https://revenueharyana.gov.in/
-       https://revenueharyana.gov.in/https://revenueharyana.gov.in/https://revenueharyana.gov.in/
+
+        {/* Labels / Names Layer */}
+        <TileLayer
+          url='https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}'
+          attribution='Labels © Esri'
+        />
 
       </MapContainer>
 
