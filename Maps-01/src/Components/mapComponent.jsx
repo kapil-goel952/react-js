@@ -29,11 +29,7 @@ const MapComponent = () => {
           attribution='Tiles © Esri'
         />
 
-        {/* Labels / Names Layer */}
-        <TileLayer
-          url='https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}'
-          attribution='Labels © Esri'
-        />
+       
 
       </MapContainer>
 
