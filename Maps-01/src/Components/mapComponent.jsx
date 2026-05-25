@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
-
 import Modal from './Modal'
 
 
-function MapEvents({ setShowModal }) {
+function MapEvents({ setShowModal, setClickedPosition }) {
 
   useMapEvents({
 
-    click() {
+    click(e) {
 
-      console.log("Map Clicked")
+      console.log(e.latlng)
+
+      setClickedPosition(e.latlng)
 
       setShowModal(true)
     }
@@ -24,6 +25,10 @@ function MapEvents({ setShowModal }) {
 const MapComponent = () => {
 
   const [showModal, setShowModal] = useState(false)
+
+  const [clickedPosition, setClickedPosition] = useState(null)
+
+  const [locations, setLocations] = useState([])
 
   return (
 
@@ -48,16 +53,19 @@ const MapComponent = () => {
         }}
       >
 
-        {/* CLICK EVENT COMPONENT */}
-        <MapEvents setShowModal={setShowModal} />
+        {/* CLICK EVENTS */}
+        <MapEvents
+          setShowModal={setShowModal}
+          setClickedPosition={setClickedPosition}
+        />
 
-        {/* Satellite Layer */}
+        {/* SATELLITE LAYER */}
         <TileLayer
           url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
           attribution='Tiles © Esri'
         />
 
-        {/* Labels Layer */}
+        {/* LABELS LAYER */}
         <TileLayer
           url='https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}'
           attribution='Labels © Esri'
@@ -65,10 +73,19 @@ const MapComponent = () => {
 
       </MapContainer>
 
-      {/* MODAL COMPONENT */}
+
+      {/* MODAL */}
       {
-        showModal &&
-        <Modal setShowModal={setShowModal} />
+        showModal && (
+
+          <Modal
+            setShowModal={setShowModal}
+            clickedPosition={clickedPosition}
+            locations={locations}
+            setLocations={setLocations}
+          />
+
+        )
       }
 
     </div>
