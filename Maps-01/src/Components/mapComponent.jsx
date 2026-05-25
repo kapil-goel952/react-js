@@ -1,7 +1,28 @@
-import React from 'react'
-import { MapContainer, TileLayer } from 'react-leaflet'
+import React, { useState } from 'react'
+import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
+
+/* MAP CLICK EVENT COMPONENT */
+const MapEvents = ({ setShowModal }) => {
+
+  useMapEvents({
+
+    click() {
+      console.log("Map Clicked")
+
+      // Modal open
+      setShowModal(true)
+    }
+
+  })
+
+  return null
+}
 
 const MapComponent = () => {
+
+  // MODAL STATE
+  const [showModal, setShowModal] = useState(false)
+
   return (
 
     <div
@@ -25,6 +46,9 @@ const MapComponent = () => {
         }}
       >
 
+        {/* CLICK EVENTS */}
+        <MapEvents setShowModal={setShowModal} />
+
         {/* Satellite Imagery */}
         <TileLayer
           url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
@@ -38,6 +62,47 @@ const MapComponent = () => {
         />
 
       </MapContainer>
+
+      {/* MODAL */}
+      {
+        showModal &&
+
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            height: "100vh",
+            width: "100vw",
+            backgroundColor: "rgba(0,0,0,0.5)",
+
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "30px",
+              borderRadius: "10px",
+              minWidth: "300px"
+            }}
+          >
+
+            <h1>Modal Opened</h1>
+
+            <button
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+
+          </div>
+
+        </div>
+      }
 
     </div>
   )
