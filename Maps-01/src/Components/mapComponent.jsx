@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
 
-/* MAP CLICK EVENT COMPONENT */
-const MapEvents = ({ setShowModal }) => {
+
+function MapEvents({ setShowModal }) {
 
   useMapEvents({
 
     click() {
+
       console.log("Map Clicked")
 
-      // Modal open
       setShowModal(true)
     }
 
@@ -18,9 +18,9 @@ const MapEvents = ({ setShowModal }) => {
   return null
 }
 
+
 const MapComponent = () => {
 
-  // MODAL STATE
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -46,16 +46,16 @@ const MapComponent = () => {
         }}
       >
 
-        {/* CLICK EVENTS */}
+        {/* CLICK EVENT COMPONENT */}
         <MapEvents setShowModal={setShowModal} />
 
-        {/* Satellite Imagery */}
+        {/* Satellite Layer */}
         <TileLayer
           url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
           attribution='Tiles © Esri'
         />
 
-        {/* Labels / Names Layer */}
+        {/* Labels Layer */}
         <TileLayer
           url='https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}'
           attribution='Labels © Esri'
@@ -63,45 +63,48 @@ const MapComponent = () => {
 
       </MapContainer>
 
+
       {/* MODAL */}
       {
-        showModal &&
-
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            height: "100vh",
-            width: "100vw",
-            backgroundColor: "rgba(0,0,0,0.5)",
-
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-        >
+        showModal && (
 
           <div
             style={{
-              backgroundColor: "white",
-              padding: "30px",
-              borderRadius: "10px",
-              minWidth: "300px"
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0,0,0,0.5)",
+
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+
+              zIndex: 9999
             }}
           >
 
-            <h1>Modal Opened</h1>
-
-            <button
-              onClick={() => setShowModal(false)}
+            <div
+              style={{
+                backgroundColor: "white",
+                padding: "30px",
+                borderRadius: "10px"
+              }}
             >
-              Close
-            </button>
+
+              <h1>Hello Modal</h1>
+
+              <button
+                onClick={() => setShowModal(false)}
+              >
+                Close
+              </button>
+
+            </div>
 
           </div>
-
-        </div>
+        )
       }
 
     </div>
