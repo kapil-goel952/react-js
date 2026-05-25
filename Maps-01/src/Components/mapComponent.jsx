@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
 
+import Modal from './Modal'
+
 
 function MapEvents({ setShowModal }) {
 
@@ -63,48 +65,10 @@ const MapComponent = () => {
 
       </MapContainer>
 
-
-      {/* MODAL */}
+      {/* MODAL COMPONENT */}
       {
-        showModal && (
-
-          <div
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundColor: "rgba(0,0,0,0.5)",
-
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-
-              zIndex: 9999
-            }}
-          >
-
-            <div
-              style={{
-                backgroundColor: "white",
-                padding: "30px",
-                borderRadius: "10px"
-              }}
-            >
-
-              <h1>Hello Modal</h1>
-
-              <button
-                onClick={() => setShowModal(false)}
-              >
-                Close
-              </button>
-
-            </div>
-
-          </div>
-        )
+        showModal &&
+        <Modal setShowModal={setShowModal} />
       }
 
     </div>
