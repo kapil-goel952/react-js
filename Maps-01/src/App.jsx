@@ -1,6 +1,6 @@
 import './index.css'
 import MapComponent from './Components/mapComponent'
-import Navbar from './Components/Navbar'
+// import Navbar from './Components/Navbar'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <div style={{
     }}>
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
       </div>
       <div>
         <MapComponent />
