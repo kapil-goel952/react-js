@@ -37,15 +37,15 @@ const MapComponent = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
+        height: "80vh",
       }}
     >
 
       <MapContainer
         center={[30.7333, 76.7794]}
         zoom={17}
-        maxZoom={19}
-        scrollWheelZoom={true}
+     
+        
 
         style={{
           height: "80vh",
@@ -74,7 +74,7 @@ const MapComponent = () => {
       </MapContainer>
 
 
-      {/* MODAL */}
+     
       {
         showModal && (
 
