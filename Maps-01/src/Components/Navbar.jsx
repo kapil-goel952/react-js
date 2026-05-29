@@ -43,6 +43,10 @@ const Navbar = () => {
           display:"flex",
           alignItems: "center",
         }}>
+             <button id='btn'>Home</button>
+          <button id='btn'>Services</button>
+          <button id='btn'>Contact</button>
+          <button id='btn'>About us</button>
        
         </div>
       </div>

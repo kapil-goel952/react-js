@@ -37,7 +37,7 @@ const MapComponent = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "85vh",
+        height: "80vh",
       }}
     >
 
