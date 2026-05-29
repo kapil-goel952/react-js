@@ -148,7 +148,8 @@ const Modal = ({
             backgroundColor: "black",
             color: "white",
             border: "none",
-            borderRadius: "5px",   }}
+            borderRadius: "5px",
+            cursor: "pointer"   }}
         >
           Save
         </button>
