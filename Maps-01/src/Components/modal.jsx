@@ -161,7 +161,7 @@ const Modal = ({
 
           style={{
             padding: "12px",
-            cursor: "pointer"
+         
           }}
         >
           Close
