@@ -38,17 +38,7 @@ const Navbar = () => {
 
           <p>MAP Work</p>
         </div>
-        <div
-        style={{
-          display:"flex",
-          alignItems: "center",
-        }}>
-             <button id='btn'>Home</button>
-          <button id='btn'>Services</button>
-          <button id='btn'>Contact</button>
-          <button id='btn'>About us</button>
        
-        </div>
       </div>
   )
 }
