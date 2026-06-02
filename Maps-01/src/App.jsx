@@ -8,7 +8,7 @@ function App() {
     <div style={{
     }}>
       <div>
-      <Navbar />
+      
       </div>
       <div>
         <MapComponent />
