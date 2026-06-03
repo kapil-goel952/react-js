@@ -47,6 +47,7 @@ const Navbar = () => {
           <button id='btn'>Search</button>
           <button id='btn'>Contact</button>
           <button id='btn'>About us</button>
+          <button id='btn'>Services</button>
        
         </div>
       </div>

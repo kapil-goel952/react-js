@@ -44,7 +44,7 @@ const MapComponent = () => {
       <MapContainer
         center={[30.7333, 76.7794]}
         zoom={17}
-     
+        maxZoom={40}
         
 
         style={{

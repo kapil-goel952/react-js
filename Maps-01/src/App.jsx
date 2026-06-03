@@ -7,7 +7,9 @@ function App() {
   return (
     <div style={{
     }}>
-      <div>
+      <div style={{position:"sticky",
+        top:0
+      }}>
       <Navbar/>
       </div>
       <div>
