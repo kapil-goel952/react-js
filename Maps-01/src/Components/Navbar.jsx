@@ -29,8 +29,8 @@ const Navbar = () => {
             alt="logo"
             style={
               {
-                height: "35px",
-                width: "35px",
+                height: "36px",
+                width: "36px",
                 borderRadius: "50%",
                 marginRight: "10px"
               }
@@ -44,7 +44,7 @@ const Navbar = () => {
           alignItems: "center",
         }}>
              <button id='btn' onclick=''>Home</button>
-          <button id='btn'>Services</button>
+          <button id='btn'>Search</button>
           <button id='btn'>Contact</button>
           <button id='btn'>About us</button>
        
