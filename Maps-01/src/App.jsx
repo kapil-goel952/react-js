@@ -10,7 +10,7 @@ function App() {
       <div style={{position:"sticky",
         top:0
       }}>
-      <Navbar/>
+        <Navbar/>
       </div>
       <div>
         <MapComponent />
