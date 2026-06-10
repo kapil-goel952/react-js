@@ -93,4 +93,4 @@ const MapComponent = () => {
 }
 
 export default MapComponent
-//  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis illo aperiam, possimus dolores tempore deserunt voluptatem, fugit consectetur necessitatibus ipsum cum exercitationem ut repellendus minima odio a unde reprehenderit dol
+//  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis illo aperiam, possimus dolores tempore deserunt voluptatem, fugit consectetur necessitatibus ipsum cum exercitationem ut repellendus minima odio a unde reprehenderit
